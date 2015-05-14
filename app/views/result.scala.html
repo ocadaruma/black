@@ -1,0 +1,29 @@
+@import models.{Prediction, Black, White}
+
+@(prediction: Prediction)
+
+@main("Black or White ?") {
+
+  @prediction match {
+    case Black => {
+      <style>
+      body {
+        background: #000;
+        color: #fff;
+      }
+      </style>
+      ちくしょう、転職だ!
+      <img alt="" style="display: block;" src="http://www.marron-mode.com/wp/wp-content/uploads/2014/04/recruit.jpg"/>
+    }
+    case White => {
+      <style>
+      body {
+        background: #fff;
+        color: #000;
+      }
+      </style>
+      <img alt="" src="https://pbs.twimg.com/profile_images/482904851714564096/WhqwerDw_400x400.jpeg"/>
+    }
+  }
+
+}
